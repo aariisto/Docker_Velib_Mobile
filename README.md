@@ -98,17 +98,26 @@ http://localhost:5001
 ## 📚 &nbsp;API Routes
 
 - **Authentication**
+
   - `/api/auth/register` - Inscription utilisateur
   - `/api/auth/login` - Connexion utilisateur
+  - `/api/auth/verify-token` - Vérifier la validité d'un token JWT
+
 - **Stations**
 
-  - `/api/station/stations` - Liste des stations
-  - `/api/station/station/<id>` - Détails d'une station
+  - `/api/station/stations` - Liste de toutes les stations Velib
+  - `/api/station/stations/<station_id>` - Récupérer le statut d'une station spécifique
 
 - **Search**
 
-  - `/api/search/search` - Recherche de stations et vélos
+  - `/api/search/` (POST) - Rechercher des stations et sauvegarder la recherche (requiert authentification)
+  - `/api/search/` (GET) - Récupérer l'historique des recherches d'un utilisateur (requiert authentification)
+  - `/api/search/delete` (POST) - Supprimer une recherche par son ID (requiert authentification)
 
 - **Reservations**
-  - `/api/reservation/create` - Créer une réservation
-  - `/api/reservation/user/<id>` - Réservations d'un utilisateur
+
+  - `/api/reservation/` (POST) - Créer une réservation (requiert authentification)
+  - `/api/reservation/` (GET) - Obtenir les réservations d'un utilisateur (requiert authentification)
+
+- **Hello World**
+  - `/api/hello/` - Route de test pour vérifier que l'API fonctionne
