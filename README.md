@@ -83,7 +83,7 @@ Le projet est divisé en trois services Docker:
 
 ```bash
 # Cloner le repository
-git clone [votre-repo-url]
+git clone https://github.com/aariisto/Docker_Velib_Mobile
 
 # Accéder au dossier du projet
 cd Docker_Velib
