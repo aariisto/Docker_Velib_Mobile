@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  flask-app:
+    build:
+      context: ./flask-app
+    container_name: flask_app
+    restart: always
+    ports:
+      - "5001:5001"
+    depends_on:
+      - mysql
+    environment:
+      - DATABASE_URL=mysql+pymysql://test:yannel@mysql/user
+    networks:
+      - velib-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_server
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: yannel
+      MYSQL_DATABASE: user
+      MYSQL_USER: test
+      MYSQL_PASSWORD: yannel
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/database.sql:/docker-entrypoint-initdb.d/database.sql
+    networks:
+      - velib-network
+
+  python-script:
+    build:
+      context: ./mysql
+    container_name: data_insertion
+    depends_on:
+      - mysql
+      - flask-app
+    restart: "no"
+    networks:
+      - velib-network
+
+networks:
+  velib-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
