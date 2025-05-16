@@ -1,8 +1,10 @@
-# Docker Velib Project 🚲
+# Docker Velib Project 🚲 [En cours de développement]
 
 ## À propos du projet
 
 Le projet Docker Velib est un système de gestion de vélos en libre-service, conçu avec une architecture moderne utilisant Docker pour faciliter le déploiement et le développement. Ce projet s'appuie sur une API Flask pour le backend, une base de données MySQL pour stocker les données, et comprend un script d'insertion de données pour alimenter la base avec des informations sur les stations Velib.
+
+> **Important** : Ce projet Docker est le backend qui fonctionne avec l'application mobile Velib disponible sur [https://github.com/aariisto/Velib_MobileApp](https://github.com/aariisto/Velib_MobileApp). Pour une expérience complète, vous devez configurer les deux projets.
 
 ## 🛠 &nbsp;Tech Stack
 
@@ -121,3 +123,17 @@ http://localhost:5001
 
 - **Hello World**
   - `/api/hello/` - Route de test pour vérifier que l'API fonctionne
+
+## 🔄 &nbsp;Relation avec l'application mobile
+
+Ce projet Docker Velib est le **backend** qui fournit les API nécessaires au fonctionnement de l'application mobile [MobileApp Vélib](https://github.com/aariisto/Velib_MobileApp).
+
+L'architecture complète du système comprend:
+
+- **Ce repository (backend)**: Services Docker avec API Flask et base de données MySQL
+- **[MobileApp Vélib](https://github.com/aariisto/Velib_MobileApp) (frontend)**: Application mobile React Native pour la géolocalisation des stations
+
+Pour déployer le système complet:
+
+1. Configurez ce backend Docker selon les instructions de démarrage rapide
+2. Configurez ensuite l'application mobile en suivant les instructions de son [README](https://github.com/aariisto/Velib_MobileApp)
