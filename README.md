@@ -1,4 +1,4 @@
-# Docker Velib Project 🚲 [En cours de développement]
+# Docker Velib Project 🚲
 
 ## À propos du projet
 
@@ -98,6 +98,8 @@ http://localhost:5001
 ```
 
 ## 📚 &nbsp;API Routes
+
+### Voici le lien vers la [documentation complète de l'API](https://documenter.getpostman.com/view/39128991/2sB2x9hqEY)
 
 - **Authentication**
 
