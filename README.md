@@ -128,7 +128,7 @@ http://localhost:5001
  
 ### 🧪 Tests (Pytest)
 
-Une base de tests automatisés a été mise en place avec **Pytest** pour valider certaines fonctionnalités critiques du backend. Cependant, les tests **ne sont pas encore complets** et plusieurs **configurations importantes restent à finaliser** (mocking, fixtures, CI, etc.).
+Une base de tests automatisés a été mise en place avec **Pytest** pour valider certaines fonctionnalités critiques du backend. Cependant, les tests **ne sont pas encore complets** et plusieurs **configurations importantes restent à finaliser**.
 
 > 🔧 Vous pouvez consulter l'état actuel des tests dans la branche [`tests` du projet](https://github.com/aariisto/Velib_MobileApp/tree/tests).
 
